@@ -6,7 +6,7 @@ NFT images from IPFS, and using data analysis and visualization techniques to id
 and patterns based on different properties.
 
 # Contributors:
-Hongyi Huo
+Hongyi Huo hhy
 
 Xingyuan Zhao
 
