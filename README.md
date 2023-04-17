@@ -7,6 +7,9 @@ and patterns based on different properties.
 
 # Contributors:
 Hongyi Huo
+
 Xingyuan Zhao
+
 Zengyu Teng
+
 Yizhi Tang
