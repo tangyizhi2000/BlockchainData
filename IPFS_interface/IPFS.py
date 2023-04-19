@@ -7,12 +7,11 @@ import shutil
 import os
 
 url = 'https://gateway.ipfs.io/ipfs/'
-file_path = '../../BlockchainData/IPFS_interface/Samples/'
 
 def test_downloads():
 	# Download images from a list of IPFS hash
 	hash_list = ['Qmd9HaQdMSyAReLM6KGNmdRSVhCkuTTNgC5R3LE41kMqSs/3149.png', 'QmQHVxjj8KDVBmXMzv242AFyXP32ytGZqxEAnLmLkjVHd6/1784.png', 'QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/1865.png']
-
+	file_path = '../../BlockchainData/IPFS_interface/Samples/'
 	for h in hash_list:
 		r = requests.get(url+h, stream=True, verify=False, headers={"Accept-Encoding": "identity"})
 		print(r, r.headers, r.raw)
@@ -22,7 +21,7 @@ def test_downloads():
 
 #test_downloads()
 
-def download_img(ipfs_address):	
+def download_img(ipfs_address, fp):	
 	if ipfs_address.startswith('ipfs://'):
 		# i.e. ipfs://Qmd9HaQdMSyAReLM6KGNmdRSVhCkuTTNgC5R3LE41kMqSs/7931.png
 		target_file = ipfs_address[7:]
@@ -30,7 +29,7 @@ def download_img(ipfs_address):
 		# https request
 		r = requests.get(url+target_file, stream=True, verify=False, headers={"Accept-Encoding": "identity"})
 		# filename processing
-		filename = file_path + target_file.replace('/', '_')
+		filename = fp + target_file.replace('/', '_')
 		if not filename.endswith('.png'):
 			filename += '.png'
 		# save image file
