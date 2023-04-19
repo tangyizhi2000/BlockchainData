@@ -90,5 +90,3 @@ def unimplemented():
 	# https://docs.alchemy.com/reference/getnftmetadatabatch
 	# https://docs.alchemy.com/reference/searchcontractmetadata
 	pass
-
-testInterface()
