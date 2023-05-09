@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>NFT Analytics Dashboard</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo layui-hide-xs layui-bg-black">NFT Analytics Dashboard</div>
+        <!-- HEAD -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item layui-hide-xs"><a href="index.html">Trait Category</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href="index2.html">Specific Trait</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- Left nav -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test" id="categories-nav">
+                <!-- Categories will be populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- BODY -->
+        <div style="font-size: 24px; padding: 10px;">Contract Address: 0x60E4d786628Fea6478F785A6d7e704777c86a7c6</div>
+        <table id="demo" lay-filter="nfts-table"></table>
+    </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+    // Fetch data
+    document.addEventListener('DOMContentLoaded', async () => {
+        const categoriesResponse = await fetch('http://127.0.0.1:5000/api/nfts');
+        const categories = await categoriesResponse.json();
+
+        const categoriesNav = document.getElementById('categories-nav');
+
+        for (const [traitType, traitValues] of Object.entries(categories)) {
+            const categoryLI = document.createElement('li');
+            categoryLI.className = 'layui-nav-item layui-nav-itemed';
+            categoryLI.innerHTML = `<a href="javascript:;">${traitType}</a>`;
+            const categoryList = document.createElement('dl');
+            categoryList.className = 'layui-nav-child';
+
+            for (const value in traitValues) {
+                const valueListItem = document.createElement('dd');
+                const valueLink = document.createElement('a');
+                valueLink.textContent = value;
+                valueLink.href = 'javascript:;';
+                valueLink.addEventListener('click', () => {
+                    displayNFTs(traitValues[value].nfts);
+                });
+                valueListItem.appendChild(valueLink);
+                categoryList.appendChild(valueListItem);
+            }
+
+            categoryLI.appendChild(categoryList);
+            categoriesNav.appendChild(categoryLI);
+        }
+    });
+
+    // Display NFTs in the table
+    function displayNFTs(nfts) {
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#demo'
+                ,data: nfts
+                ,cols: [[
+                    {field: 'token_id', title: 'Token ID', sort: true}
+                    ,{field: 'last_price', title: 'Last Price(ETH)', sort: true}
+                    ,{field: 'cumulative_rarity', title: 'Cumulative Rarity', sort: true}
+                    ,{field: 'buyer', title: 'Buyer', width:200}
+                    ,{field: 'seller', title: 'seller', width:200}
+                    ,{field: 'trend', title: 'Trend', sort: true}
+                ]]
+                ,page: false
+                ,limit: 90
+            });
+        });
+    }
+</script>
+
+</body>
+</html>

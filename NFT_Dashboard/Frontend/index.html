@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>NFT Analytics Dashboard</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo layui-hide-xs layui-bg-black">NFT Analytics Dashboard</div>
+        <!-- HEAD -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item layui-hide-xs"><a href="index.html">Trait Category</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href="index2.html">Specific Trait</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- Left nav -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test" id="categories-nav">
+                <!-- Categories will be populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- BODY -->
+        <div style="font-size: 24px; padding: 10px;">Contract Address: 0x60E4d786628Fea6478F785A6d7e704777c86a7c6</div>
+        <table id="demo" lay-filter="nfts-summary-table"></table>
+    </div>
+</div>
+<script src="./layui/layui.js"></script>
+<script>
+    // Fetch data
+    document.addEventListener('DOMContentLoaded', async () => {
+        const categoriesResponse = await fetch('http://127.0.0.1:5000/api/nfts');
+        const categories = await categoriesResponse.json();
+
+        const categoriesNav = document.getElementById('categories-nav');
+
+        for (const [traitType, traitValues] of Object.entries(categories)) {
+            const categoryLI = document.createElement('li');
+            categoryLI.className = 'layui-nav-item';
+            categoryLI.innerHTML = `<a href="javascript:;">${traitType}</a>`;
+            categoryLI.addEventListener('click', () => {
+                displaySummaryTable(categories, traitType);
+            });
+            categoriesNav.appendChild(categoryLI);
+        }
+    });
+
+    // Display summary table
+    function displaySummaryTable(categories, traitType) {
+        const summaryData = Object.entries(categories[traitType]).map(([value, data]) => {
+            return {
+                value: value,
+                num: data.num,
+                prevalence: data.prevalence,
+                average_price:data.average_price,
+                average_trend:data.average_trend,
+                floor_price:data.floor_price,
+                item_on_floor:data.item_on_floor
+            };
+        });
+
+        layui.use('table', function(){
+            var table = layui.table;
+
+            table.render({
+                elem: '#demo'
+                ,data: summaryData
+                ,cols: [[
+                    {field: 'value', title: 'Value'}
+                    ,{field: 'num', title: 'Total Number', sort: true}
+                    ,{field: 'prevalence', title: 'Prevalence', sort: true}
+                    ,{field: 'average_price', title: 'Average Price(ETH)', sort: true}
+                    ,{field: 'average_trend', title: 'Average Trend', sort: true}
+                    ,{field: 'floor_price', title: 'Floor Price(ETH)', sort: true}
+                    ,{field: 'item_on_floor', title: 'Item On Floor(#)'}
+                ]]
+                ,page: false
+                ,limit: 90
+            });
+        });
+    }
+</script>
+</body>
+</html>
