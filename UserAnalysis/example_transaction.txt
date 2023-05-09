@@ -1,0 +1,158 @@
+{
+  "nfts": [
+    {
+      "contract": {
+        "address": "0x1f02bf9dde7c79137a08b2dd4fc964bfd2499734",
+        "name": "Elephants",
+        "symbol": "ELENFT",
+        "totalSupply": "7778",
+        "tokenType": "ERC721",
+        "openSea": {
+          "floorPrice": 0.022,
+          "collectionName": "3L3Phants Official",
+          "safelistRequestStatus": "verified",
+          "imageUrl": "https://i.seadn.io/gcs/files/71dfb6cacb894a713d91f493917fa1b5.png?w=500&auto=format",
+          "description": "3L3Phants NFT is a collection of 7,777 Elephants stampeding on the Ethereum blockchain. From the mind of Ic3cream and designed by World Renowned Artist Tornado Toad. Join the Herd today!\n\nEarn $NUT token in our discord now!\n\nhttps://discord.gg/3l3phantsnft",
+          "externalUrl": "http://3l3phants.io",
+          "twitterUsername": "3L3NFT",
+          "discordUrl": "https://discord.gg/3L3phantsnft",
+          "lastIngestedAt": "2023-02-02T08:11:43.000Z"
+        },
+        "contractDeployer": "0xe5cb067e90d5cd1f8052b83562ae670ba4a211a8",
+        "deployedBlockNumber": 15140845
+      },
+      "tokenId": "890",
+      "tokenType": "ERC721",
+      "title": "3L3PHANTS #890",
+      "description": "3L3Phants NFT is a collection of 7,777 Elephants stampeding on the Ethereum blockchain. Saving 3L3Phants & Wildlife one NFT at a time",
+      "timeLastUpdated": "2023-02-04T23:45:33.795Z",
+      "rawMetadata": {
+        "name": "3L3PHANTS #890",
+        "description": "3L3Phants NFT is a collection of 7,777 Elephants stampeding on the Ethereum blockchain. Saving 3L3Phants & Wildlife one NFT at a time",
+        "image": "ipfs://QmTvmGSL6cFxRyoam2vBRgVL8vjcLrzdum14K9qMQ7MP2b",
+        "attributes": [
+          {
+            "value": "Red",
+            "trait_type": "Background"
+          },
+          {
+            "value": "Glowing",
+            "trait_type": "Body"
+          },
+          {
+            "value": "Clubmasters",
+            "trait_type": "Eyes"
+          },
+          {
+            "value": "Shocked",
+            "trait_type": "Mouth"
+          },
+          {
+            "value": "Tie Dye",
+            "trait_type": "Outfit"
+          },
+          {
+            "value": "Double",
+            "trait_type": "Tusks"
+          }
+        ]
+      },
+      "tokenUri": {
+        "raw": "ipfs://QmcpMnvcmUvn3EsQ6QmV1J7QwouBKimrhbHpEV5Db9gFgy/890",
+        "gateway": "https://ipfs.io/ipfs/QmcpMnvcmUvn3EsQ6QmV1J7QwouBKimrhbHpEV5Db9gFgy/890"
+      },
+      "media": [
+        {
+          "raw": "ipfs://QmTvmGSL6cFxRyoam2vBRgVL8vjcLrzdum14K9qMQ7MP2b",
+          "gateway": "https://nft-cdn.alchemy.com/eth-mainnet/121fdb0563b1917179c9ad7d97ae081f",
+          "thumbnail": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/121fdb0563b1917179c9ad7d97ae081f",
+          "format": "png",
+          "bytes": 199542
+        }
+      ],
+      "from": "0xe5cb067e90d5cd1f8052b83562ae670ba4a211a8",
+      "to": "0x84561625814e1c7e882c1ae20a9d722a8c301f04",
+      "transactionHash": "0x43ff4418ca88d94857f3b687e8ac7450e107c2a36517e8d59a5308dba4acec94",
+      "blockNumber": "0xec8125"
+    },
+    {
+      "contract": {
+        "address": "0x1f02bf9dde7c79137a08b2dd4fc964bfd2499734",
+        "name": "Elephants",
+        "symbol": "ELENFT",
+        "totalSupply": "7778",
+        "tokenType": "ERC721",
+        "openSea": {
+          "floorPrice": 0.022,
+          "collectionName": "3L3Phants Official",
+          "safelistRequestStatus": "verified",
+          "imageUrl": "https://i.seadn.io/gcs/files/71dfb6cacb894a713d91f493917fa1b5.png?w=500&auto=format",
+          "description": "3L3Phants NFT is a collection of 7,777 Elephants stampeding on the Ethereum blockchain. From the mind of Ic3cream and designed by World Renowned Artist Tornado Toad. Join the Herd today!\n\nEarn $NUT token in our discord now!\n\nhttps://discord.gg/3l3phantsnft",
+          "externalUrl": "http://3l3phants.io",
+          "twitterUsername": "3L3NFT",
+          "discordUrl": "https://discord.gg/3L3phantsnft",
+          "lastIngestedAt": "2023-02-02T08:11:43.000Z"
+        },
+        "contractDeployer": "0xe5cb067e90d5cd1f8052b83562ae670ba4a211a8",
+        "deployedBlockNumber": 15140845
+      },
+      "tokenId": "3990",
+      "tokenType": "ERC721",
+      "title": "3L3PHANTS #3990",
+      "description": "3L3Phants NFT is a collection of 7,777 Elephants stampeding on the Ethereum blockchain. Saving 3L3Phants & Wildlife one NFT at a time",
+      "timeLastUpdated": "2023-01-07T22:53:31.448Z",
+      "rawMetadata": {
+        "name": "3L3PHANTS #3990",
+        "description": "3L3Phants NFT is a collection of 7,777 Elephants stampeding on the Ethereum blockchain. Saving 3L3Phants & Wildlife one NFT at a time",
+        "image": "ipfs://QmaL3UbrR8T1tz7j8SuYmQxkQJoPXYZeU49YC5DCHphKDg",
+        "attributes": [
+          {
+            "value": "Pink Checkerboard",
+            "trait_type": "Background"
+          },
+          {
+            "value": "Mammoth",
+            "trait_type": "Body"
+          },
+          {
+            "value": "Mad",
+            "trait_type": "Eyes"
+          },
+          {
+            "value": "Tennis Ball",
+            "trait_type": "Item"
+          },
+          {
+            "value": "Lips Open",
+            "trait_type": "Mouth"
+          },
+          {
+            "value": "Green Doctor",
+            "trait_type": "Outfit"
+          },
+          {
+            "value": "Nubs",
+            "trait_type": "Tusks"
+          }
+        ]
+      },
+      "tokenUri": {
+        "raw": "ipfs://QmcpMnvcmUvn3EsQ6QmV1J7QwouBKimrhbHpEV5Db9gFgy/3990",
+        "gateway": "https://ipfs.io/ipfs/QmcpMnvcmUvn3EsQ6QmV1J7QwouBKimrhbHpEV5Db9gFgy/3990"
+      },
+      "media": [
+        {
+          "raw": "ipfs://QmaL3UbrR8T1tz7j8SuYmQxkQJoPXYZeU49YC5DCHphKDg",
+          "gateway": "https://nft-cdn.alchemy.com/eth-mainnet/8e8706cbd7f6f2b46576dd386410b805",
+          "thumbnail": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-mainnet/8e8706cbd7f6f2b46576dd386410b805",
+          "format": "png",
+          "bytes": 198447
+        }
+      ],
+      "from": "0xe5cb067e90d5cd1f8052b83562ae670ba4a211a8",
+      "to": "0x6a3623db71c1b3442a94e3fd4655334b48114693",
+      "transactionHash": "0x13f33287ac95893e06cda2cd30c08003808ac46867382d8c92e1c864e4895ec6",
+      "blockNumber": "0xec8131"
+    }
+  ]
+}
