@@ -1,0 +1,6 @@
+1. There are few APIs about users' activities. Ex. Alchemy's getTransfersForOwner() seems to be only one.
+	Therefore, it is necessary to build such a tool, making it convinent for people to analyze nft buyers and sellers information
+2. We provide a detailed analysis about users' activity. Specifically, what nfts one particular user pays his/her attention; how much money/Inverstment returns does each user get;
+	Therefore, it would be easier to study user activities. For example, using our APIs, one could gain insights on top 1000 most profit nft users. What they care about.
+3. Describe what we do.
+4. Hadoop & Map-reduce.

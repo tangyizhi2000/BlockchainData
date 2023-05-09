@@ -1,0 +1,15 @@
+Non-fungible Token, NFT, is derived by the smart contracts of Ethereum.
+Due to Ethereum's smart contracts technologies, nfts can prove the ownership of digital assets. Because of this feature, nfts has become increasingly significant in industries including arts, music, gaming, other forms of entertainment, and even real-estate.
+
+Tremendous growth in nfts has been shown at the beginning of 2021. "in the first four months of 2021, the NFT volume has exceeded 2 billion USD, ten times more than the entire NFT trading volume in 2020." [1] With increasing attention to nft market, many websites market, APIs and SDKs are built to support easy analysis of nft market such as OpenSeas, Alchemy, etc.
+
+When collecting data from these APIs, users often found themselves in situations where data can be downloaded in parallel. In this case, given the huge amount of data and nft's dicentralized nature, using MapReduce programming model often makes data processing faster and more organized. Specifically, MapReduce, inspired by functional programming, uses 'split-apply-combine' strategies to parallelize data analysis in Terabytes scales.
+
+In this report, we uses Alchemy APIs and SDKs to fetch data including digit assets themselves, nft buyers and sellers, prices, and several other information about the nft market. Then these data were to give a paradigm of (1) how to apply machine learning techniques to nft collection (2)
+provide the general public easier access to nfts and things cannot be done using tradition API calls (2) use machine learning techniques to analyze one specific nft collection - bored monkeys. Specifically, the contributions of this project are as follow: (这个地方比较乱，因为没有确定下来paper的方向到底怎么走，到底是强调我们给了一种paradigm还是强调我们machine leaning的贡献。并且四个人做的方向差异较大，要想怎么统一为一个主题) ~260 words
+
+
+[1] Wikipedia https://en.wikipedia.org/wiki/Non-fungible_token
+[2] Mapping the NFT revolution: market trends, trade networks, and visual features
+[3] https://opensea.io/
+[4] https://dl.acm.org/doi/abs/10.1145/1327452.1327492
